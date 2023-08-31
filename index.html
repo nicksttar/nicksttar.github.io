@@ -45,8 +45,19 @@ button:hover {
 }
 
 #form {
-    text-align: center;
-    display: none;
+    align-items: center;
+    display: inline;
+    flex-direction: column;
+    width: 80%;
+}
+
+input {
+    margin-bottom: 20px;
+}
+.cont {
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
 }
      </style>
 </head>
@@ -57,12 +68,15 @@ button:hover {
         <p>Lorem ipsum</p>
         <button id="buy">Buy</button>
     </div>
-    <form id="form" style="display: none;">
-        <input type="text" placeholder="Name" id="user_name">
-        <input type="text" placeholder="Email" id="user_email">
-        <input type="text" placeholder="Number" id="user_phone">
-        <button id="order">Order</button>
-    </form>
+    <div class="cont">
+
+        <form id="form" style="display: none;">
+            <input type="text" placeholder="Name" id="user_name">
+            <input type="text" placeholder="Email" id="user_email">
+            <input type="text" placeholder="Number" id="user_phone">
+            <button id="order">Order</button>
+        </form>
+    </div>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
         let tg = window.Telegram.WebApp; 
@@ -71,7 +85,7 @@ button:hover {
         tg.expand();
         buy.addEventListener('click', () => {
             document.querySelector('.main').style.display = 'none';
-            document.getElementById('form').style.display = 'block';
+            document.getElementById('form').style.display = 'flex';
             document.getElementById('user_name').value = tg.initDataUnsafe.user.first_name + " " + tg.initDataUnsafe.user.last_name;
         });
         
