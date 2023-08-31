@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <h1>Magazine</h1>
+        <img src="https://cdn-icons-png.flaticon.com/128/9001/9001235.png" alt="Product Image"> 
+        <p>Lorem ipsum</p>
+        <button id="buy">Buy</button>
+    </div>
+    <form id="form" style="display: none;">
+        <input type="text" placeholder="Name" id="user_name">
+        <input type="text" placeholder="Email" id="user_email">
+        <input type="text" placeholder="Number" id="user_phone">
+        <button id="order">Order</button>
+    </form>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script>
+        let tg = window.Telegram.WebApp; 
+        let buy = document.getElementById('buy');
+        let order = document.getElementById('order');
+        tg.expand();
+        buy.addEventListener('click', () => {
+            document.querySelector('.main').style.display = 'none';
+            document.getElementById('form').style.display = 'block';
+            document.getElementById('user_name').value = tg.initDataUnsafe.user.first_name + " " + tg.initDataUnsafe.user.last_name;
+        });
+        
+        order.addEventListener('click', () => {
+            let name = document.getElementById('user_name')
+            let email = document.getElementById('user_email')
+            let phone = document.getElementById('user_phone')
+
+
+            let data = {
+                name: name,
+                email: email,
+                phone: phone
+            }
+            tg.sendData(JSON.stringify(data));
+
+            tg.close();
+        });
+    </script>
+</body>
+</html>
