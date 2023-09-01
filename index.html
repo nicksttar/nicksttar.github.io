@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>GoodFood</h1>
+    <div class="main" id="main">
+        <div class="good-card">
+            <img src="https://cdn-icons-png.flaticon.com/128/6384/6384304.png" alt="Product Image"> 
+            <p>Burger • 2.00$</p>
+            <!-- <button id="burger-add-btn" onclick="hideButton()">ADD</button> -->
+            <button class="decrement">-</button>
+            <span class="quantity">0</span>
+            <button class="increment">+</button>
+        </div>
+        <div class="good-card">
+            <img src="https://cdn-icons-png.flaticon.com/128/8047/8047969.png" alt="Product Image"> 
+            <p>Fish • 2.55$</p>
+            <!-- <button id="btn13" onclick="hideButton1()">ADD</button> -->
+            <button class="decrement">-</button>
+            <span class="quantity">0</span>
+            <button class="increment">+</button>
+
+        </div>
+        <div class="good-card">
+            <img src="https://cdn-icons-png.flaticon.com/128/202/202295.png" alt="Product Image"> 
+            <p>Crab • 5.18$</p>
+            <button class="decrement">-</button>
+            <span class="quantity">0</span>
+            <button class="increment">+</button>
+        </div>
+        <div class="good-card">
+            <img src="https://cdn-icons-png.flaticon.com/128/10158/10158548.png" alt="Product Image"> 
+            <p>Meat • 4.22$</p>
+            <button class="decrement">-</button>
+            <span class="quantity">0</span>
+            <button class="increment">+</button>
+        </div>
+        <div class="good-card">
+            <img src="https://cdn-icons-png.flaticon.com/128/7365/7365965.png" alt="Product Image"> 
+            <p>Potato • 0.75$</p>
+            <button class="decrement">-</button>
+            <span class="quantity">0</span>
+            <button class="increment">+</button>
+        </div>
+        <div class="good-card">
+            <img src="https://cdn-icons-png.flaticon.com/128/487/487387.png" alt="Product Image"> 
+            <p>Pizza • 10.21$</p>
+            <button class="decrement">-</button>
+            <span class="quantity">0</span>
+            <button class="increment">+</button>
+        </div>
+        <div class="good-card">
+            <img src="https://cdn-icons-png.flaticon.com/128/3405/3405952.png" alt="Product Image"> 
+            <p>Eggs • 0.15$</p>
+            <button class="decrement">-</button>
+            <span class="quantity">0</span>
+            <button class="increment">+</button>
+        </div>
+        <div class="good-card">
+            <img src="https://cdn-icons-png.flaticon.com/128/8828/8828349.png" alt="Product Image"> 
+            <p>Bread • 1.24$</p>
+            <button class="decrement">-</button>
+            <span class="quantity">0</span>
+            <button class="increment">+</button>
+        </div>
+    </div>
+
+    <div class="cont">
+        <form id="order-form" style="display: none;">
+            <input type="text" placeholder="Name" id="user_name">
+            <input type="text" placeholder="Email" id="user_email">
+            <input type="text" placeholder="Number" id="user_phone">
+            <button id="order_finish">Order</button>
+        </form>
+        
+
+    </div>
+    <div class="cart">
+        <h2>Корзина</h2>
+        <ul id="cart-items">
+
+            <!-- Здесь будут отображаться выбранные товары -->
+        </ul>
+        <p id="total">Общая сумма: $0</p>
+        <button onclick="custom()">Order</button>
+    </div>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
