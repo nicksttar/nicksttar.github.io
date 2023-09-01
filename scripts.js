@@ -83,7 +83,7 @@ function custom() {
 }
 
 
-let order_finish = document.getElementById('order-finish');
+let order_finish = document.getElementById('order_finish');
 
 order_finish.addEventListener('click', () => {
     let name_user = document.getElementById('iser_name').value;
