@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop</title>
-    <!-- <link rel="stylesheet" href="style.css">
-     -->
-     <style>
-        
-* {
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -19,58 +17,160 @@ body {
     background-color: var(--tg-theme-bg-color);
 }
 
-.main {
+/* .main {
+    text-align: center;
+} */
+
+h1 {
     text-align: center;
 }
 
-h1 {
-    margin-top: 50px;
-    margin-bottom: 10px;
-}
 
-button {
-    border: 0;
-    border-radius: 50px;
-    height: 60px;
-    width: 200px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 500ms ease;
-    color: var(--tg-theme-button-color);
-    background: var(--tg-theme-button-text-color);
-}
 
-button:hover {
-    background: var(--tg-theme-secondary-bg-color);
-}
 
 #form {
+    padding: 10px;
     align-items: center;
-    display: inline;
+    /* display: flex; */
+    display: none;
     flex-direction: column;
     width: 80%;
 }
 
 input {
-    margin-bottom: 20px;
+    margin: 0;
+    padding: 0;
+    margin: 10px;
 }
 .cont {
     display: flex;
     margin-top: 100px;
     justify-content: center;
 }
-     </style>
+
+.good-card {
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* height: 200px; */
+    width: 50%;
+    /* align-items: center; */
+    text-align: center;
+    /* margin: 30px; */
+    margin-bottom: 10px;
+
+}
+
+.main {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+img {
+    height: 100px;
+}
+
+p {
+    padding-bottom: 5px;
+}
+
+/* button {
+    color: black;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+    border-style: none;
+} */
+
+
+.footer {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    position: fixed; /* Фиксированное положение */
+    bottom: 0px; /* Расстояние от правого края окна браузера */ /* Расстояние сверху */
+    width: 100%;
+    height: 10%;
+    background: #ffe; /* Цвет фона */ 
+    border-top: 0.5px solid #333; /* Параметры рамки */ 
+    box-sizing: content-box;
+}
+
+.footer-photo {
+    height: 100%;
+}
+
+.btn {
+    background-color: #5dbea3;
+    border-width: 0.1px;
+    margin-top: 8px;
+    border-radius: 5px;
+    width: 98%;
+    height: 80%;
+}
+
+#counter {
+    display: inline;
+}
+    </style>
 </head>
 <body>
+    <h1>GoodFood</h1>
     <div class="main">
-        <h1>Magazine</h1>
-        <img src="https://cdn-icons-png.flaticon.com/128/9001/9001235.png" alt="Product Image"> 
-        <p>Lorem ipsum</p>
-        <button id="buy">Buy</button>
+        <div class="good-card">
+            <img src="https://cdn-icons-png.flaticon.com/128/6384/6384304.png" alt="Product Image"> 
+            <p>Burger <br>2.00$
+            </p>
+            <button id="btn12" onclick="hideButton()">ADD</button>
+            <div id="plus-minus" style="display: none;">
+                <button onclick="decrementcounter()">-</button>
+                <p id="counter">1</p>
+                <button id="plus" onclick="incrementcounter()">+</button>
+            </div>
+        </div>
+        <div class="good-card">
+            <img src="https://cdn-icons-png.flaticon.com/128/8047/8047969.png" alt="Product Image"> 
+            <p>Fish <br>2.55$</p>
+            <button id="buy2">Buy</button>
+        </div>
+        <div class="good-card">
+            <img src="https://cdn-icons-png.flaticon.com/128/202/202295.png" alt="Product Image"> 
+            <p>Crab <br>5.18$</p>
+            <button id="buy3">Buy</button>
+        </div>
+        <div class="good-card">
+            <img src="https://cdn-icons-png.flaticon.com/128/10158/10158548.png" alt="Product Image"> 
+            <p>Meat <br>4.22$</p>
+            <button id="buy4">Buy</button>
+        </div>
+        <div class="good-card">
+            <img src="https://cdn-icons-png.flaticon.com/128/7365/7365965.png" alt="Product Image"> 
+            <p>Potato <br>0.75$</p>
+            <button id="buy5">Buy</button>
+        </div>
+        <div class="good-card">
+            <img src="https://cdn-icons-png.flaticon.com/128/487/487387.png" alt="Product Image"> 
+            <p>Pizza <br>10.21$</p>
+            <button id="buy6">Buy</button>
+        </div>
+        <div class="good-card">
+            <img src="https://cdn-icons-png.flaticon.com/128/3405/3405952.png" alt="Product Image"> 
+            <p>Eggs <br>0.15$</p>
+            <button id="buy7">Buy</button>
+        </div>
+        <div class="good-card">
+            <img src="https://cdn-icons-png.flaticon.com/128/8828/8828349.png" alt="Product Image"> 
+            <p>Bread <br>1.24$</p>
+            <button id="buy8">Buy</button>
+        </div>
+    </div>
+    <div class="footer">
+        <button class="btn">VIEW ORDER</button>
     </div>
     <div class="cont">
 
-        <form id="form" style="display: none;">
+        <form id="form">
             <input type="text" placeholder="Name" id="user_name">
             <input type="text" placeholder="Email" id="user_email">
             <input type="text" placeholder="Number" id="user_phone">
@@ -79,13 +179,64 @@ input {
     </div>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
+        function hideButton() {
+            var button1 = document.getElementById('btn12');
+            var button2 = document.getElementById('plus-minus');
+
+            button1.style.display = 'none';
+            button2.style.display = 'inline';
+        }
+
+
+        function showButton() {
+            var button1 = document.getElementById('btn12');
+            var button2 = document.getElementById('plus-minus');
+
+            button1.style.display = 'inline';
+            button2.style.display = 'none';
+        }
+
+
+
+        var number = document.getElementById('counter');
+        var counter = 1;
+
+
+        let food_data = {
+                burger: 2*counter,
+                Fish: fish,
+                Crab: crab
+            }
+
+
+        function decrementcounter() {
+            if (counter > 1) {
+                counter --;
+                updatecounter();
+            } else {
+                showButton();
+            }
+
+        }
+
+
+        function incrementcounter() {
+            counter ++;
+            updatecounter();
+        }
+
+
+        function updatecounter() {
+            number.textContent = counter;
+        }
+
         let tg = window.Telegram.WebApp; 
         let buy = document.getElementById('buy');
         let order = document.getElementById('order');
         tg.expand();
         buy.addEventListener('click', () => {
             document.querySelector('.main').style.display = 'none';
-            document.getElementById('form').style.display = 'flex';
+            document.getElementById('form').style.display = 'block';
             document.getElementById('user_name').value = tg.initDataUnsafe.user.first_name + " " + tg.initDataUnsafe.user.last_name;
         });
         
@@ -102,7 +253,7 @@ input {
             }
 
 
-            tg.sendData(JSON.stringify(data));
+            tg.sendData(JSON.stringify(food_data));
             tg.close();
             // ok
         });
