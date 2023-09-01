@@ -4,6 +4,10 @@ const cartItems = document.getElementById('cart-items');
 const totalElement = document.getElementById('total');
 var span_item = document.querySelectorAll('.quantity');
 
+
+let tg = window.Telegram.WebApp; 
+tg.expand();
+
 // Объект для хранения информации о товарах и их количестве
 const products = {
     'Burger • 2.00$': { price: 2, quantity: 0 },
@@ -95,9 +99,6 @@ order_finish.addEventListener('click', () => {
         phone: phone,
         products
     }
-    
-    let tg = window.Telegram.WebApp; 
-    tg.expand();
     tg.sendData(JSON.stringify(foodcort));
     tg.close();
 
