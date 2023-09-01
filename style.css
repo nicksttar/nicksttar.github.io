@@ -5,11 +5,15 @@
 }
 
 
+
 body {
-    background-color: white;
+
+    background-image: url("giphy.gif"); /* Укажите путь к вашей гифке */
+    background-size: cover; /* Растягивает изображение на всю ширину и высоту элемента body */
+    background-repeat: no-repeat; /* Запрещает повторение изображения */
+
     height: 100%;
 }
-
 /* .main {
     text-align: center;
 } */
