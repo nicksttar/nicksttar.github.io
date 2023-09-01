@@ -89,8 +89,6 @@ function custom() {
 let order_finish = document.getElementById('order_finish');
 
 function endfunction() {
-    tg.sendData(JSON.stringify({'1': '1'}));
-    tg.close();
     let name_user = document.getElementById('user_name').value;
     let mail = document.getElementById('user_email').value;
     let phone = document.getElementById('user_phone').value;
