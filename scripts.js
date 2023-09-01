@@ -4,10 +4,6 @@ const cartItems = document.getElementById('cart-items');
 const totalElement = document.getElementById('total');
 var span_item = document.querySelectorAll('.quantity');
 
-
-let tg = window.Telegram.WebApp; 
-tg.expand();
-
 // Объект для хранения информации о товарах и их количестве
 const products = {
     'Burger • 2.00$': { price: 2, quantity: 0 },
@@ -89,7 +85,7 @@ function custom() {
 
 let order_finish = document.getElementById('order_finish');
 
-order_finish.addEventListener('click', () => {
+function endfunction() {
     let name_user = document.getElementById('iser_name').value;
     let mail = document.getElementById('user_email').value;
     let phone = document.getElementById('user_phone').value;
@@ -99,10 +95,11 @@ order_finish.addEventListener('click', () => {
         phone: phone,
         products
     }
+    
     tg.sendData(JSON.stringify(foodcort));
     tg.close();
 
-});
+};
 
 
 
