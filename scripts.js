@@ -5,6 +5,7 @@ const totalElement = document.getElementById('total');
 var span_item = document.querySelectorAll('.quantity');
 
 let tg = window.Telegram.WebApp;
+tg.expand();
 
 // Объект для хранения информации о товарах и их количестве
 const products = {
