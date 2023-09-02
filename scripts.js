@@ -92,24 +92,31 @@ function custom() {
 
 let order_finish = document.getElementById('order_finish');
 
+let order_finish = document.getElementById('order_finish');
+
 function endfunction() {
     let name_user = document.getElementById('user_name').value;
     let adress = document.getElementById('user_adress').value;
     let phone = document.getElementById('user_phone').value;
-    let comment = document.getElementById('user_comment')
+    let comment = document.getElementById('user_comment').value;
+
+    // Validation check
+    if (name_user === '' || adress === '' || phone === '' || comment === '') {
+        alert('Please fill in all fields'); // You can display an alert or any other error handling here.
+        return;
+    }
+
     let foodcort = {
         name: name_user,
         adress: adress,
         phone: phone,
         comment: comment,
-        products
+        // products: You should define 'products' here if it's part of your data structure.
     }
-    
+
     tg.sendData(JSON.stringify(foodcort));
     tg.close();
-
 };
-
 
 function superf() {
     let secret_menu = document.getElementById('view-order')
