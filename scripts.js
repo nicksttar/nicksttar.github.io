@@ -96,7 +96,7 @@ function endfunction() {
     let name_user = document.getElementById('user_name').value;
     let adress = document.getElementById('user_adress').value;
     let phone = document.getElementById('user_phone').value;
-    let comment = document.getElementById('user_comment')
+    let comment = document.getElementById('user_comment').value;
     let foodcort = {
         name: name_user,
         adress: adress,
