@@ -92,17 +92,11 @@ function custom() {
 
 let order_finish = document.getElementById('order_finish');
 
-let order_finish = document.getElementById('order_finish');
-
 function endfunction() {
     let name_user = document.getElementById('user_name').value;
     let adress = document.getElementById('user_adress').value;
     let phone = document.getElementById('user_phone').value;
     let comment = document.getElementById('user_comment')
-
-
-
-    
     let foodcort = {
         name: name_user,
         adress: adress,
@@ -115,6 +109,7 @@ function endfunction() {
     tg.close();
 
 };
+
 
 function superf() {
     let secret_menu = document.getElementById('view-order')
