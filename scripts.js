@@ -9,15 +9,15 @@ tg.expand();
 
 // Объект для хранения информации о товарах и их количестве
 const products = {
-    'Burger • 2.00$': { price: 2, quantity: 0 },
-    'Fish • 2.55$': { price: 2.55, quantity: 0 },
-    'Crab • 5.18$': { price: 5.18, quantity: 0 },
-    'Meat • 4.22$': { price: 4.22, quantity: 0 },
+    'Бургер • 50₴': { price: 50, quantity: 0 },
+    'Риба • 129₴': { price: 129, quantity: 0 },
+    'Краб • 450.70₴': { price: 450.70, quantity: 0 },
+    "М'ясо • 526.20₴": { price: 526.20, quantity: 0 },
 
-    'Potato • 0.75$': { price: 0.75, quantity: 0 },
-    'Pizza • 10.21$': { price: 10.21, quantity: 0 },
-    'Eggs • 0.15$': { price: 0.15, quantity: 0 },
-    'Bread • 1.24$': { price: 1.24, quantity: 0 },
+    'Картопля • 11.60₴': { price: 11.60, quantity: 0 },
+    'Піцца • 345₴': { price: 345, quantity: 0 },
+    'Яйця • 4.60₴': { price: 4.60, quantity: 0 },
+    'Хліб • 45.50₴': { price: 45.50, quantity: 0 },
 };
 
 // Функция для обновления информации о корзине
@@ -37,7 +37,7 @@ function updateCart() {
         }
     }
     total = total.toFixed(2); 
-    totalElement.textContent = `Full payment: $${total}`;
+    totalElement.textContent = `Загалом: ${total}₴`;
 }
 
 // Добавляем обработчики событий для кнопок "плюс"
@@ -80,8 +80,12 @@ updateCart();
 function custom() {
     let order_form = document.getElementById('order-form');
     let main = document.getElementById('main');
+    let menu = document.getElementById('back-btn');
+    let order_finish_btn = document.getElementById('order-finish-btn');
 
+    order_finish_btn.style.display = 'none';
     main.style.display = 'none';
+    menu.style.display = 'inline';
     order_form.style.display = 'flex';
 }
 
@@ -90,12 +94,14 @@ let order_finish = document.getElementById('order_finish');
 
 function endfunction() {
     let name_user = document.getElementById('user_name').value;
-    let mail = document.getElementById('user_email').value;
+    let adress = document.getElementById('user_adress').value;
     let phone = document.getElementById('user_phone').value;
+    let comment = document.getElementById('user_comment')
     let foodcort = {
         name: name_user,
-        mail: mail,
+        adress: adress,
         phone: phone,
+        comment: comment,
         products
     }
     
@@ -105,8 +111,32 @@ function endfunction() {
 };
 
 
+function superf() {
+    let secret_menu = document.getElementById('view-order')
+    let okbtn = document.getElementById('Ok-button')
+
+    secret_menu.style.display = 'inline'
+    okbtn.style.display = 'none'
+}
+
+function hideorder() {
+    let secret_menu = document.getElementById('view-order')
+    let okbtn = document.getElementById('Ok-button')
+
+    secret_menu.style.display = 'none'
+    okbtn.style.display = 'inline'
+}
 
 
+function menuf() {
+    let order_finish_btn = document.getElementById('order-finish-btn');
+    let menu = document.getElementById('back-btn');
+    let main = document.getElementById('main');
+    let order_form = document.getElementById('order-form');
 
-
+    order_form.style.display = 'none'
+    order_finish_btn.style.display = 'inline';
+    main.style.display = 'flex'
+    menu.style.display = 'none'
+}
 
