@@ -184,6 +184,7 @@ text-align: center;
 }
 
 .sub {
+    font-family: 'Inter', sans-serif;
     margin-top: 0;
     display: inline;
     font-size: 10px;
