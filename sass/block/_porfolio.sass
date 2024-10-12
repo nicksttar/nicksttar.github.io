@@ -1,0 +1,27 @@
+.portfolio
+    min-height: 100vh
+    padding-top: 100px
+    &__wrapper
+        margin-top: 70px
+        display: grid
+        justify-content: center
+        gap: 25px
+        grid-template-columns: repeat(5, 170px)
+        grid-template-rows: repeat(2, 250px)
+    &__item
+        padding-bottom: 10px
+        // border: 1px solid black
+        border-radius: 15px
+        display: flex
+        align-items: flex-end
+        justify-content: center
+        transition: all .4s
+        background: url('../img/projects/projects.webp') center center/cover no-repeat
+        &:hover
+            scale: 1.1
+    &__link
+        text-decoration: none
+        color: white
+        transition: all .4s
+        &:hover
+            color: rgb(0, 110, 255)

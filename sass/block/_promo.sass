@@ -1,0 +1,61 @@
+.promo
+    min-height: 100vh
+    background-color: $bg_color
+    padding-top: 120px
+    display: flex
+    &__wrapper
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        gap: 82px
+    &__block
+        padding-top: 88px
+
+    &__wrapper-btn
+        margin-top: 30px
+        display: flex
+        gap: 40px
+        align-items: center
+    &__btn
+        width: 135px
+        height: 45px
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15)
+        background: rgb(71, 1, 255)
+        color: white
+        font-size: 14px
+        font-weight: 700
+        border: none
+        cursor: pointer
+    &__link
+        color: white
+        text-decoration: none
+    &__circle
+        margin-bottom: 100px
+        width: 500px
+        height: 500px
+        border-radius: 100%
+        background-color: white
+        background: url("../img/personal/promo_photo.jpg") center center/cover no-repeat
+        background-position-x: -80px
+        background-size: 120%
+
+
+.subtitle
+    padding-left: 10px
+    position: relative
+    color: rgb(255, 255, 255)
+    font-size: 16px
+    font-weight: 700
+    line-height: 24px
+    letter-spacing: 0%
+    text-align: left
+    z-index: 2
+    &::before
+        @include before_circle
+
+.title
+    color: rgb(255, 255, 255)
+    font-family: Poppins
+    font-size: 48px
+    font-weight: 700
+    text-align: left

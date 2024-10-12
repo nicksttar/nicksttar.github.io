@@ -1,0 +1,112 @@
+.contacts
+    min-height: 100vh
+    padding-top: 100px
+    padding-bottom: 100px
+    &__wrapper
+        display: grid
+        justify-content: center
+        column-gap: 70px
+        grid-template-columns: 400px 600px
+        grid-template-rows: 280px 320px
+        grid-template-areas: "photo descr" "photo form"
+
+    &__photo
+        grid-area: photo
+        img
+            border-radius: 10px
+            width: 100%
+            height: 100%
+            object-fit: cover
+    &__descr
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        grid-area: descr
+        .divider
+            margin: 0
+            margin-bottom: 20px
+    &__form
+        grid-area: form
+
+    .subtext1, .subtext2
+        font-size: 14px
+        font-weight: 700
+        line-height: 21px
+
+
+    .social__wrapper
+        display: flex
+        margin-top: 20px
+        margin-bottom: 20px
+        gap: 20px
+        .social__item1
+            width: 25px
+            height: 25px
+            img
+                width: 100%
+
+    .contact__form
+        display: grid
+        grid-template-columns: repeat(2, 280px)
+        grid-template-rows: repeat(5, 65px)
+        column-gap: 40px
+        
+    .input__wrapper
+        position: relative
+        input
+            outline: none
+            padding-left: 10px
+            width: 280px
+            height: 45px
+            border: 1px solid rgb(0, 0, 0)
+            background: rgba(196, 196, 196, 0)
+        &::before
+            position: absolute
+            top: -8px
+            left: 10px
+            content: ''
+            font-size: 12px
+            display: block
+            width: 70px
+            height: 18px
+            background: white
+            text-align: center
+    .name
+        &::before
+            content: 'Your name'
+    .phone
+        &::before
+            content: 'Your mail'
+
+    .textarea
+        textarea
+            resize: none
+            outline: none
+            padding-left: 10px
+            padding-top: 12px
+            width: 600px
+            height: 190px
+            border: 1px solid rgb(0, 0, 0)
+            background: rgba(196, 196, 196, 0)                
+        &::before
+            width: 100px
+            content: 'Write message'
+    .send-btn
+        margin-top: 15px
+        grid-column: 1/2
+        grid-row: 5/6
+        width: 220px
+        height: 45px
+        border: none
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15)
+        background: $main_color
+
+        color: white
+        font-size: 14px
+        font-weight: 700
+        line-height: 21px
+        letter-spacing: 0%
+
+
+
+

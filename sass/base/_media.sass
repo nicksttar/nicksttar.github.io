@@ -1,0 +1,229 @@
+$screen1: 1400px
+$screen2: 1200px
+$screen3: 992px
+$screen4: 768px
+$screen5: 576px
+$screen6: 425px
+$screen7: 375px
+
+
+@media ( max-width: $screen1) //1400px
+    .sidepanel
+        display: none
+
+
+@media ( max-width: $screen2) // 1200px
+    .container
+        max-width: 80%
+
+    //Promo
+    .promo
+        padding-top: 40px
+        
+    //About
+    .about
+        &__grid-container
+            justify-content: center
+            grid-template-columns: 500px
+            grid-template-rows: 600px 300px 600px
+            grid-template-areas: 'photo' 'desc' 'add'
+
+        &__additional
+            grid-template-columns: 300px
+            padding-left: 0
+
+        &__description
+            padding: 0
+            padding-top: 50px
+
+        &__marker
+            text-align: center
+            &::before
+                left: 50%
+                transform: translateX(-50%)
+
+        &__title
+            text-align: center
+            font-size: 30px
+
+        &__text
+            text-align: center
+
+        &__additional
+            padding: 0
+            padding-top: 20px
+            justify-content: center
+            padding-bottom: 40px
+
+        .divider
+            margin: 0 auto
+            margin-bottom: 20px
+
+    //Experience
+    .experience
+        &__title
+            font-size: 30px
+            line-height: 40px
+        &__wrapper
+            grid-template-columns: 375px
+            justify-content: center
+            row-gap: 80px
+            padding-left: 100px
+
+    //Portfolio
+    .portfolio
+        padding-bottom: 100px
+        &__wrapper
+            grid-template-columns: repeat(4, 170px)
+            grid-template-rows: repeat(3, 250px)
+
+    //Contacts
+    .contacts
+        &__wrapper
+            grid-template-columns: 0 400px
+            grid-template-rows: 220px 370px
+            column-gap: 0
+        &__photo
+        .experience__title, .marker
+            margin: 0 auto
+            margin-bottom: 10px
+        .divider, .subtext1, .subtext2
+            margin: 0 auto
+            margin-bottom: 10px
+        .social__wrapper
+            margin: 0 auto
+            margin-bottom: 10px
+        .contact__form
+            justify-items: center
+            grid-template-columns: 280px
+            justify-content: center
+            grid-template-rows: repeat(6, 65px)
+            .send-btn
+                grid-row: 6/7
+            textarea
+                height: 190px
+                width: 280px
+            .textarea
+                height: 100%
+
+
+@media ( max-width: $screen3) //992px
+    .container
+        max-width: 80%
+
+    //Portfolio
+    .portfolio
+        padding-bottom: 100px
+        &__wrapper
+            grid-template-columns: repeat(3, 170px)
+            grid-template-rows: repeat(4, 250px)
+    
+
+@media ( max-width: $screen4) //768px
+    .container
+        width: 80%
+
+    //Promo
+    .promo__circle
+        width: 400px
+        height: 400px
+
+    //About
+    .about__grid-container
+        grid-template-columns: 300px
+        grid-template-rows: 450px 380px 600px
+
+
+    //Experience
+    .experience
+        &__wrapper
+            grid-template-columns: 220px
+            justify-content: center
+        &__item
+            &::before
+                height: 250px
+
+    //Skills
+    .skills
+        &__container
+            grid-template-columns: repeat(4, 100px)
+
+    //Portfolio
+    .portfolio
+        padding-bottom: 100px
+        &__wrapper
+            grid-template-columns: repeat(2, 170px)
+            grid-template-rows: repeat(5, 250px)
+
+    //Services
+    .services
+        &__wrapper
+            flex-direction: column
+            padding-left: 120px
+            gap: 0
+
+
+
+@media ( max-width: $screen5) //576px
+    .container
+        max-width: 80%
+
+    //Skills
+    .skills
+        &__container
+            grid-template-columns: repeat(4, 50px)
+            grid-template-rows: repeat(5, 50px)
+        &__item
+            width: 100%
+
+
+@media ( max-width: $screen5) //576
+    .container
+        max-width: 80%
+
+    //Promo
+    .promo__circle
+        width: 300px
+        height: 300px
+        background-position-x: -42px
+    .title
+        font-size: 30px
+
+
+@media ( max-width: $screen6)
+    .promo__circle
+        width: 250px
+        height: 250px
+        background-position-x: -42px
+    .title
+        font-size: 30px
+
+    //Portfolio
+    .portfolio
+        padding-bottom: 100px
+
+    //Contacts
+    .contacts
+        &__wrapper
+            grid-template-columns: 0 300px
+        .subtext1, .subtext2
+            font-size: 10px
+
+    //Menu
+    .menu
+        width: 280px
+
+
+@media ( max-width: $screen7)
+
+    //Portfolio
+    .portfolio
+        padding-bottom: 100px
+        &__wrapper
+            grid-template-columns: repeat(1, 170px)
+            grid-template-rows: repeat(10, 250px)
+
+    //Menu
+    .menu
+        width: 240px
+

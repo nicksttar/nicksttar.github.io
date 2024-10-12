@@ -1,0 +1,27 @@
+.services
+    min-height: 100vh
+    padding-top: 100px
+    &__wrapper
+        margin-top: 70px
+        padding-left: 150px
+        display: flex
+        justify-content: center
+        gap: 50px
+    &__column
+        display: grid
+        justify-content: center
+        justify-items: start
+        align-items: center
+        grid-template-columns: repeat(1, 200px)
+        grid-template-rows: repeat(5, 65px)
+    &__item
+        position: relative
+        font-size: 14px
+        font-weight: 700
+        &::before
+            position: absolute
+            @include before_circle
+            left: -40px
+            top: 0px
+            height: 20px
+            width: 20px

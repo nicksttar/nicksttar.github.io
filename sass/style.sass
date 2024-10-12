@@ -1,0 +1,56 @@
+@font-face
+    font-family: 'Poppins'
+    src: url('../fonts/Poppins-Bold.ttf')
+
+@font-face
+    font-family: 'Poppins'
+    src: url('../fonts/Poppins-Medium.ttf')
+
+@font-face
+    font-family: 'Poppins'
+    src: url('../fonts/Poppins-Regular.ttf')
+    
+
+@import 'base/_variables'
+@import 'base/_mixins'
+@import 'block/_promo'
+@import 'block/_sidepanel'
+@import 'block/_burger'
+@import 'block/_about'
+@import 'block/_experience'
+@import 'block/_skills'
+@import 'block/_porfolio'
+@import 'block/_services'
+@import 'block/_contacts'
+@import 'block/_submit'
+
+@import 'base/_media'
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: Poppins
+
+.container
+    width: 1140px
+    margin: 0 auto
+
+.divider
+    margin: 0 auto
+    display: block
+    width: 60px
+    height: 0
+    border: 2px solid $main_color
+    margin-bottom: 20px
+
+.marker
+    position: relative
+    text-align: center
+    color: rgb(0, 0, 0)
+    font-size: 16px
+    font-weight: 700
+    &::before
+        @include before_circle
+        left: 50%
+        transform: translateX(-50%)
