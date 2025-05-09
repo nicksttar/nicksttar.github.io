@@ -1,0 +1,83 @@
+/* Large screens (≥1200px) */
+@media (min-width: 1200px) {
+    .home-wrapper {
+        padding: 100px;
+        text-align: left;
+    }
+}
+
+/* Medium screens (tablets, ≥768px and <1200px) */
+@media (max-width: 1199px) {
+    .home-wrapper {
+        padding: 60px;
+        text-align: center;
+    }
+
+    .portfolio-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .nav-page {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Small screens (phones, <768px) */
+@media (max-width: 767px) {
+    .home-title {
+        font-size: 28px;
+    }
+
+    .subtitle {
+        font-size: 21px;
+    }
+
+    .portfolio-item {
+        width: 100%;
+        width: 350px;
+    }
+
+    .nav-page img.main-photo {
+        width: 120px;
+        height: auto;
+        border-radius: 50%;
+    }
+
+    .nav-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .social-links-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .download-cv-btn {
+        font-size: 14px;
+        margin-top: 20px;
+    }
+
+    .contact-item{
+        width: 350px;
+    }
+
+    .contact-wrapper{
+        gap: 15px;
+    }
+    .portfolio-wrapper{
+        gap: 15px;
+    }
+    .home-animation{
+        width: 200px;
+        height: 200px;
+    }
+}
