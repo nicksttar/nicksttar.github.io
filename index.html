@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Никита Ульяница | Frontend-разработчик</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+</head>
+
+<body>
+    <!-- Animated Gradient Background -->
+    <div class="background-gradient"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">NU.</a>
+            <nav class="main-nav">
+                <a href="#about">Обо мне</a>
+                <a href="#portfolio">Портфолио</a>
+                <a href="#contact">Контакты</a>
+            </nav>
+            <a href="CV.pdf" class="cta-button header-cta" download>Скачать CV</a>
+            <button class="mobile-nav-toggle" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <a href="#about">Обо мне</a>
+        <a href="#portfolio">Портфолио</a>
+        <a href="#contact">Контакты</a>
+        <a href="CV.pdf" class="cta-button" download>Скачать CV</a>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Привет, я Никита — Frontend-разработчик</h1>
+                    <p class="hero-subtitle">Превращаю сложные задачи в элегантный и функциональный код. Создаю быстрые, отзывчивые и красивые веб-приложения.</p>
+                    <div class="hero-links">
+                        <a href="https://github.com/nicksttar" target="_blank" class="social-icon" aria-label="GitHub">
+                            <!-- GitHub SVG Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297 24 5.67 18.627.297 12 .297z"/></svg>
+                        </a>
+                        <a href="https://t.me/nicksttar" target="_blank" class="social-icon" aria-label="Telegram">
+                            <!-- Обновленная иконка Telegram -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.57c-.28 1.1-.86 1.33-1.78.82l-4.76-3.51-2.24 2.15c-.22.22-.4.38-.7.38z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 class="section-title">Обо мне</h2>
+                        <p>Я — full-stack разработчик с фокусом на React и Python. Моя страсть — создание интуитивно понятных пользовательских интерфейсов и надежных бэкенд-решений. Я постоянно изучаю новые технологии, чтобы мои проекты были не только функциональными, но и технологически продвинутыми.</p>
+                        <ul class="skills-list">
+                            <li>JavaScript (ES6+) & TypeScript</li>
+                            <li>React, Redux, React Router</li>
+                            <li>Python (Flask, aiogram)</li>
+                            <li>Node.js, Express, MongoDB</li>
+                            <li>HTML5 & CSS3 (Sass, Flexbox, Grid)</li>
+                            <li>Git, Webpack, Docker</li>
+                        </ul>
+                    </div>
+                    <div class="about-photo">
+                        <img src="./static/photo.jpg" alt="Никита Ульянистый">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+                <h2 class="section-title">Избранные проекты</h2>
+                <div class="portfolio-grid">
+                    <!-- Project 1 -->
+                    <div class="portfolio-card">
+                        <div class="card-image">
+                            <img src="./static/shop.png" alt="Furniture Store">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Furniture Store</h3>
+                            <p class="card-description">Стильный и современный интернет-магазин на React с полной реализацией CRUD-операций для управления товарами.</p>
+                            <div class="card-tags">
+                                <span>React</span>
+                                <span>Redux</span>
+                                <span>SCSS</span>
+                            </div>
+                            <a href="https://github.com/nicksttar/E-commerce-React" class="card-link" target="_blank">Посмотреть на GitHub</a>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="portfolio-card">
+                        <div class="card-image">
+                            <img src="./static/match-me.png" alt="Match Me Bot">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Match Me Bot</h3>
+                            <p class="card-description">Telegram-бот для знакомств, разработанный на Python с использованием aiogram и MongoDB для хранения данных пользователей.</p>
+                            <div class="card-tags">
+                                <span>Python</span>
+                                <span>aiogram</span>
+                                <span>MongoDB</span>
+                            </div>
+                            <a href="https://github.com/nicksttar/MatchMeTgBot" class="card-link" target="_blank">Посмотреть на GitHub</a>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="portfolio-card">
+                        <div class="card-image">
+                            <img src="./static/robotic-arm.png" alt="TgBot Generator">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">TgBot Generator</h3>
+                            <p class="card-description">CLI-утилита на Python, которая автоматически генерирует файловую структуру и базовую конфигурацию для новых Telegram-ботов.</p>
+                            <div class="card-tags">
+                                <span>Python</span>
+                                <span>CLI</span>
+                                <span>Automation</span>
+                            </div>
+                            <a href="https://github.com/nicksttar/Easy-TgBot-Generator" class="card-link" target="_blank">Посмотреть на GitHub</a>
+                        </div>
+                    </div>
+                    <!-- Project 4 -->
+                    <div class="portfolio-card">
+                        <div class="card-image">
+                            <img src="./static/gift.png" alt="GiveAway Bot">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">GiveAway Bot</h3>
+                            <p class="card-description">Telegram-бот для организации и проведения розыгрышей в каналах. Автоматизирует выбор победителей и публикацию результатов.</p>
+                            <div class="card-tags">
+                                <span>Python</span>
+                                <span>aiogram</span>
+                                <span>Telegram API</span>
+                            </div>
+                            <a href="https://github.com/nicksttar/GiveAwayTgBot" class="card-link" target="_blank">Посмотреть на GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ОБНОВЛЕННАЯ СЕКЦИЯ КОНТАКТОВ ===== -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Свяжитесь со мной</h2>
+                <p class="contact-subtitle">
+                    Я всегда в поиске интересных проектов и готов к сотрудничеству.
+                    <br>
+                    Лучший способ связаться со мной — написать на почту.
+                </p>
+                <div class="contact-main-link-wrapper">
+                    <a href="mailto:nikita.uglanitsa.w@gmail.com" class="contact-main-link">nikita.uglanitsa.w@gmail.com</a>
+                </div>
+                <div class="contact-socials-footer">
+                    <a href="https://t.me/nicksttar" target="_blank" rel="noopener noreferrer">Telegram</a>
+                    <a href="https://github.com/nicksttar" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Никита Ульяница. Создано с ❤️ в Киеве.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+
+</body>
+</html>
